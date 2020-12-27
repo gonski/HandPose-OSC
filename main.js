@@ -4,7 +4,7 @@ const server = require('./index')
 
 function createWindow() {
 	// Create the browser window.
-	const win = new BrowserWindow({ width: 800, height: 600 });
+	const win = new BrowserWindow({ width: 100, height: 100 });
 	
 	//uncomment for debug console:
 	//win.webContents.openDevTools();

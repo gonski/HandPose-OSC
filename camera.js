@@ -125,18 +125,18 @@ const guiState =
   devices: {
     videoDevices: []
   },
-  renderLandMarks: true,
+  renderLandMarks: false,
   sendOsc: true,
   oscPort: 8008,
   host: '127.0.0.1',
   output: {
-    showVideo: true,
+    showVideo: false,
   },
   oscFormatting: {
-    handInViewConfidence: true,
-    boundingBox: true,
+    handInViewConfidence: false,
+    boundingBox: false,
     landmarks: true,
-    annotations: true
+    annotations: false
   },
   net: null
 };
@@ -146,6 +146,7 @@ const guiState =
  */
 async function setupGui(cameras, net) {
   guiState.net = net;
+  /*
   if (cameras.length > 0) {
     guiState.camera = cameras[0].deviceId;
   }
@@ -189,6 +190,9 @@ async function setupGui(cameras, net) {
   oscFormatting.add(guiState.oscFormatting, "landmarks");
   oscFormatting.add(guiState.oscFormatting, "annotations");
   oscFormatting.open();
+
+  gui.close()
+  */
 }
 
 /**
@@ -293,11 +297,11 @@ async function bindPage() {
   }
 
   setupGui([], net);
-  setupFPS();
+  //setupFPS();
   detectHands(video, net);
 
   document.getElementById("loading").style.display = "none";
-  document.getElementById("main").style.display = "block";
+  //document.getElementById("main").style.display = "block";
 }
 
 navigator.getUserMedia = navigator.getUserMedia ||
