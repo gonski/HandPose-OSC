@@ -1,4 +1,6 @@
 # HandPose OSC
+!! This is a simplified version of https://github.com/faaip/HandPose-OSC used for https://github.com/gonski/wekitunenator 
+
 *Fork of [lysdexic audio's ](https://github.com/lysdexic-audio/)[n4m-handpose](https://github.com/lysdexic-audio/n4m-handpose), but runs stand-alone and outputs OSC instead of using Max*<br>
 
 Wraps [MediaPipe Handpose](https://github.com/tensorflow/tfjs-models/tree/master/handpose) inside electron and serves the detected parts via OSC.
